@@ -12,8 +12,18 @@ const SeacrhBar = () => {
           IGDB
         </Typography>
       </Stack>
-      <Stack flexDirection="row" justifyContent="center" alignItems="center" gap={1} mt="4px">
-        <Box component="input" sx={{ height: "40px", width: "440px", border: "2px solid red",px: "9px", color:'brown', fontSize: '22px' }} />
+      <Stack flexShrink={5} flexDirection="row" justifyContent="center" alignItems="center" gap={1} mx="12px" mt="6px">
+        <Box
+          component="input"
+          sx={{
+            height: "40px",
+            width: { xs: "100%", sm: "440px" },
+            border: "2px solid red",
+            px: "9px",
+            color: "brown",
+            fontSize: "22px",
+          }}
+        />
         <Button variant="contained" color="error" size="large" endIcon={<LocalFireDepartmentIcon />} sx={{ borderRadius: 0 }}>
           Search
         </Button>
