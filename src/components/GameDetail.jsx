@@ -15,7 +15,7 @@ const GameDetail = ({ gameId }) => {
   }
 
   return (
-    <Dialog open={true} onClose={handleClose} scroll="paper" maxWidth="lg" fullWidth>
+    <Dialog open={true} onClose={handleClose} scroll="paper" maxWidth="xl" fullWidth>
       {isFetching || isSsDataFetching ? (
         <></>
       ) : (
@@ -60,9 +60,8 @@ const GameDetail = ({ gameId }) => {
 
               <Box
                 component="img"
-                height="360px"
                 src={data.background_image}
-                sx={{ width: { xs: "100%", sm: "80%", md: "50%" }, m: "auto", borderRadius: "8px" }}
+                sx={{ width: { xs: "100%", sm: "80%", md: "50%" }, m: "auto", borderRadius: "8px", objectFit: "cover" }}
               />
 
               <Typography variant="h4">Description</Typography>
@@ -75,9 +74,13 @@ const GameDetail = ({ gameId }) => {
                 <Box
                   key={image.id}
                   component="img"
-                  height="360px"
                   src={image.image}
-                  sx={{ width: { xs: "100%", sm: "80%", md: "50%" }, m: "auto", borderRadius: "8px" }}
+                  sx={{
+                    width: { xs: "100%", sm: "80%", md: "50%" },
+                    m: "auto",
+                    borderRadius: "8px",
+                    objectFit: "cover",
+                  }}
                 />
               ))}
             </Stack>
