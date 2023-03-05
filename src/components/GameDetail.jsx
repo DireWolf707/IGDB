@@ -20,13 +20,13 @@ const GameDetail = ({ gameId }) => {
         <></>
       ) : (
         <>
-          <DialogTitle>
-            <Typography variant="h4" fontWeight="bold" color="brown">
+          <DialogTitle sx={{bgcolor: '#000'}}>
+            <Typography variant="h4" fontWeight="bold" color="#fff">
               {data?.name}
             </Typography>
           </DialogTitle>
 
-          <DialogContent dividers={true}>
+          <DialogContent dividers={true} sx={{bgcolor: '#E5E4E2'}}>
             <Stack gap={1.5}>
               <Stack>
                 <Typography variant="subtitle1" fontWeight="bold">
